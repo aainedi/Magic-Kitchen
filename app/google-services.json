@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "918170932785",
+    "project_id": "magickitchen-409a1",
+    "storage_bucket": "magickitchen-409a1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:918170932785:android:de1a7d0b7a443213092710",
+        "android_client_info": {
+          "package_name": "com.example.magickitchenapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQVBWDhdVnOmAqSnbzczG5H4k5gg99JnM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

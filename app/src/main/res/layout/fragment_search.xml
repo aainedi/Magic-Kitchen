@@ -1,0 +1,254 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchFragment">
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="14dp"
+        android:background="@drawable/search_view_bg"
+        app:iconifiedByDefault="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:queryHint="Search recipe here ..." />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedCategory"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/searchView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/recycleView"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/categoryLayout"
+            android:layout_width="80dp"
+            android:layout_height="0dp"
+            android:background="@android:color/transparent"
+            app:layout_constraintTop_toBottomOf="@id/searchView"
+            app:layout_constraintEnd_toStartOf="@id/recycleView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+
+            <ImageView
+                android:id="@+id/chickenicon"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="3dp"
+                android:clickable="true"
+                android:src="@drawable/chickenicon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvchicken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:text="Chicken"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:clickable="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/chickenicon" />
+
+            <ImageView
+                android:id="@+id/beeficon"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="3dp"
+                android:clickable="true"
+                android:src="@drawable/beeficon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvchicken" />
+
+            <TextView
+                android:id="@+id/tvbeef"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:text="Beef"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:clickable="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/beeficon" />
+
+            <ImageView
+                android:id="@+id/seafoodicon"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="3dp"
+                android:clickable="true"
+                android:src="@drawable/seafoodicon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvbeef" />
+
+            <TextView
+                android:id="@+id/tvseafood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:text="Seafood"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:clickable="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/seafoodicon" />
+
+            <ImageView
+                android:id="@+id/eggicon"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="3dp"
+                android:clickable="true"
+                android:src="@drawable/eggicon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvseafood" />
+
+            <TextView
+                android:id="@+id/tvegg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:text="Egg"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:clickable="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/eggicon" />
+
+            <ImageView
+                android:id="@+id/riceicon"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="3dp"
+                android:clickable="true"
+                android:src="@drawable/riceicon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvegg" />
+
+            <TextView
+                android:id="@+id/tvrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:text="Rice"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:clickable="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/riceicon" />
+
+            <ImageView
+                android:id="@+id/pastaicon"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="3dp"
+                android:clickable="true"
+                android:src="@drawable/pastaicon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvrice" />
+
+            <TextView
+                android:id="@+id/tvpasta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:text="Pasta"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:clickable="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pastaicon" />
+
+            <ImageView
+                android:id="@+id/vegetablesicon"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="3dp"
+                android:clickable="true"
+                android:src="@drawable/vegetablesicon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvpasta" />
+
+            <TextView
+                android:id="@+id/tvvegetables"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:text="Vegetables"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:clickable="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vegetablesicon" />
+
+            <ImageView
+                android:id="@+id/desserticon"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="3dp"
+                android:clickable="true"
+                android:src="@drawable/desserticon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvvegetables" />
+
+            <TextView
+                android:id="@+id/tvdessert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:text="Dessert"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:clickable="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/desserticon" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleView"
+        android:layout_width="322dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/nestedCategory"
+        app:layout_constraintTop_toBottomOf="@id/searchView" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
